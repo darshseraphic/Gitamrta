@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f1f1f1">
+  <meta name="description" content="Gitamrta is a quiet Bhagavad Gita reader for Chrome. Discover a random shloka or find a chapter and verse, with Sanskrit, transliteration, English translations and Hindi commentary.">
+  <meta property="og:title" content="Gitamrta — A shloka for the moment">
+  <meta property="og:description" content="Explore the Bhagavad Gita, one shloka at a time, with a minimal Chrome reader.">
+  <meta property="og:type" content="website">
+  <title>Gitamrta — A shloka for the moment</title>
+  <link rel="icon" type="image/svg+xml" href="assets/gitamrta-logo.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner page-width">
+      <a class="brand" href="#top" aria-label="Gitamrta home">
+        <img src="assets/gitamrta-logo.svg" width="38" height="38" alt="">
+        <span class="brand-word">Gitamrta</span>
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span class="brand-descriptor">BHAGAVAD GITA READER</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
+        <a href="#experience">The reader</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#install">Install</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Change theme" title="Theme: System">
+          <svg class="theme-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.2"/><path d="M10 1.8v2M10 16.2v2M18.2 10h-2M3.8 10h-2m14-5.8-1.4 1.4M5.6 14.4l-1.4 1.4m11.6 0-1.4-1.4M5.6 5.6 4.2 4.2"/></svg>
+          <span id="theme-label">System</span>
+        </button>
+        <a class="header-cta" href="#install">Get Gitamrta <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-width" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A BHAGAVAD GITA READER FOR CHROME</p>
+        <h1 id="hero-title">A shloka for<br><em>the moment</em><span class="title-period">.</span></h1>
+        <p class="hero-lede">Make a little room for reflection. Explore the Bhagavad Gita in Sanskrit, follow its transliteration, and read English translations alongside Hindi commentary.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#install">Bring Gitamrta to Chrome <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#experience">Explore the reader <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-meta" aria-label="Product details">
+          <span><i aria-hidden="true"></i> 18 chapters</span>
+          <span><i aria-hidden="true"></i> Chapter / verse search</span>
+          <span><i aria-hidden="true"></i> Light, dark &amp; system themes</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Preview of the Gitamrta Chrome extension">
+        <div class="art-index"><span>01 / THE READER</span><span class="index-rule"></span><span>LIVE PREVIEW</span></div>
+        <div class="orbit-mark" aria-hidden="true"><img src="assets/gitamrta-logo.svg" alt=""></div>
+        <div class="extension-window">
+          <div class="window-topbar">
+            <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="window-tab"><img src="assets/gitamrta-logo.svg" alt="" width="17" height="17"><span>Gitamrta</span></div>
+            <span class="window-menu" aria-hidden="true">···</span>
+          </div>
+          <div class="extension-ui">
+            <div class="extension-brand-row">
+              <div class="extension-brand"><img src="assets/gitamrta-logo.svg" alt="" width="32" height="32"><span><strong>Gitamrta</strong><small>BHAGAVAD GITA READER</small></span></div>
+              <span class="theme-chip"><i></i> System</span>
+            </div>
+            <div class="preview-intro">
+              <span class="micro-label">A MOMENT OF CLARITY</span>
+              <h2>Wisdom, one<br>shloka at a time.</h2>
+              <p>Explore the Gita, one verse at a time.</p>
+            </div>
+            <div class="preview-search">
+              <div class="preview-search-label"><span>FIND A SHLOKA</span><span>CHAPTER / VERSE</span></div>
+              <div class="preview-search-input"><code>2/47</code><span class="search-arrow" aria-hidden="true">→</span></div>
+            </div>
+            <div class="preview-random"><span><strong>A little serendipity</strong><small>Let the Gita find you a verse.</small></span><span class="random-chip">↝ &nbsp;Random shloka</span></div>
+            <div class="preview-verse">
+              <div class="verse-card-heading"><span><small>THE BHAGAVAD GITA</small><strong>A verse to reflect on</strong></span><b>02 / 47</b></div>
+              <p class="sanskrit-sample" lang="sa">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।<br>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥</p>
+              <div class="preview-divider"></div>
+              <span class="micro-label">TRANSLITERATION</span>
+              <p class="translit-sample">karmaṇy-evādhikāras te mā phaleṣu kadācana…</p>
+              <div class="preview-divider"></div>
+              <div class="preview-content-pair"><span><small>ENGLISH TRANSLATION</small><b>Source-attributed text</b></span><span><small>HINDI COMMENTARY</small><b>हिन्दी टीका</b></span></div>
+            </div>
+            <div class="preview-foot"><span>Chapter 2 · Verse 47</span><span>▢ &nbsp; Copy verse</span></div>
+          </div>
+        </div>
+        <div class="art-caption"><span class="caption-star" aria-hidden="true">✳</span> Small enough to open. Spacious enough to pause.</div>
+      </div>
+    </section>
+
+    <section class="signal-band" aria-label="Gitamrta at a glance">
+      <div class="signal-inner page-width">
+        <div class="signal-intro"><span class="eyebrow">THE ESSENTIALS</span><strong>One reader.<br>Many ways in.</strong></div>
+        <div class="signal-stat"><strong>18</strong><span>chapters</span><small>The complete chapter range</small></div>
+        <div class="signal-stat"><strong>01</strong><span>simple reference</span><small>Chapter / verse, such as 2/47</small></div>
+        <div class="signal-stat"><strong>03</strong><span>ways to read</span><small>Sanskrit · English · Hindi</small></div>
+      </div>
+    </section>
+
+    <section class="section page-width experience-section" id="experience" aria-labelledby="experience-title">
+      <div class="section-topline"><span class="section-number">02</span><span class="section-line"></span><span>THE GITAMRTA EXPERIENCE</span></div>
+      <div class="section-intro">
+        <div><p class="eyebrow">LESS NOISE. MORE MEANING.</p><h2 id="experience-title">A reader that<br><em>gets out of the way.</em></h2></div>
+        <p class="section-lede">No feed to keep up with and no complicated setup. Open the extension, find a verse or let the randomizer choose one, then spend your attention on the words.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-large">
+          <div class="feature-visual discovery-visual" aria-hidden="true">
+            <div class="chapter-wheel"><span class="wheel-center">G</span><i class="wheel-tick tick-a"></i><i class="wheel-tick tick-b"></i><i class="wheel-tick tick-c"></i><i class="wheel-tick tick-d"></i><i class="wheel-tick tick-e"></i><i class="wheel-tick tick-f"></i><span class="wheel-number number-a">01</span><span class="wheel-number number-b">06</span><span class="wheel-number number-c">12</span><span class="wheel-number number-d">18</span></div>
+            <span class="visual-note">A verse, chosen at random</span>
+          </div>
+          <div class="feature-copy"><span class="feature-index">01 / DISCOVER</span><h3>Let a verse find you.</h3><p>Choose Random Shloka to discover a valid chapter and verse without deciding where to begin.</p></div>
+        </article>
+
+        <article class="feature-card feature-card-search">
+          <div class="feature-visual search-visual" aria-hidden="true">
+            <span class="micro-label">FIND A SHLOKA</span>
+            <div class="search-demo"><code>2 / 47</code><span>↗</span></div>
+            <div class="search-example"><span>Chapter</span><b>02</b><i></i><span>Verse</span><b>47</b></div>
+          </div>
+          <div class="feature-copy"><span class="feature-index">02 / FIND</span><h3>Go straight to the verse.</h3><p>Enter a chapter and verse in the familiar <code>chapter/verse</code> format, like <code>2/47</code>.</p></div>
+        </article>
+
+        <article class="feature-card feature-card-language">
+          <div class="feature-visual language-visual" aria-hidden="true">
+            <div class="language-sheet"><span class="language-tag">SANSKRIT</span><p lang="sa">योगस्थः कुरु कर्माणि</p><div></div><span class="language-tag">TRANSLITERATION</span><p class="language-roman">yoga-sthaḥ kuru karmāṇi</p></div>
+            <div class="language-side-label">READ / REFLECT</div>
+          </div>
+          <div class="feature-copy"><span class="feature-index">03 / UNDERSTAND</span><h3>Read across languages.</h3><p>See the original Sanskrit and transliteration, with English translation and Hindi commentary when the source provides them.</p></div>
+        </article>
+
+        <article class="feature-card feature-card-theme">
+          <div class="feature-visual theme-visual" aria-hidden="true">
+            <div class="theme-preview light-preview"><span>LIGHT</span><div><i></i><i></i><i></i></div></div>
+            <div class="theme-preview dark-preview"><span>DARK</span><div><i></i><i></i><i></i></div></div>
+            <div class="system-badge">SYSTEM · LIGHT · DARK</div>
+          </div>
+          <div class="feature-copy"><span class="feature-index">04 / MAKE IT YOURS</span><h3>Keep the mood comfortable.</h3><p>Switch between System, Light and Dark themes. Your selected theme is remembered on your device.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="privacy-section page-width" id="privacy" aria-labelledby="privacy-title">
+      <div class="privacy-graphic" aria-hidden="true">
+        <div class="privacy-ring ring-one"></div><div class="privacy-ring ring-two"></div><div class="privacy-ring ring-three"></div>
+        <div class="privacy-center"><img src="assets/gitamrta-logo.svg" alt=""><span>YOUR READER<br>YOUR DEVICE</span></div>
+        <span class="privacy-node node-one">LOCAL</span><span class="privacy-node node-two">HTTPS</span><span class="privacy-node node-three">YOU</span>
+      </div>
+      <div class="privacy-copy">
+        <div class="section-topline"><span class="section-number">03</span><span class="section-line"></span><span>PRIVACY &amp; PERMISSIONS</span></div>
+        <p class="eyebrow">CLEAR ABOUT WHAT HAPPENS</p>
+        <h2 id="privacy-title">Your reading stays<br><em>yours to return to.</em></h2>
+        <p class="privacy-lede">Gitamrta is designed to do one job: fetch and display the verse you ask for. The current extension source keeps its permissions narrow and its saved preferences on your device.</p>
+        <div class="privacy-points">
+          <div><span class="privacy-check">✓</span><p><strong>Local preferences</strong><small>Chrome local storage remembers your theme and last chapter/verse reference.</small></p></div>
+          <div><span class="privacy-check">✓</span><p><strong>One scripture host</strong><small>Network requests go to the Vedic Scriptures API to retrieve the selected verse.</small></p></div>
+          <div><span class="privacy-check">✓</span><p><strong>No analytics in the current source</strong><small>The current project source contains no analytics or advertising code.</small></p></div>
+          <div><span class="privacy-check">✓</span><p><strong>Clipboard on request</strong><small>Gitamrta writes verse text only when you press Copy; it does not read clipboard contents.</small></p></div>
+        </div>
+        <p class="privacy-caveat">The API receives the requested chapter/verse path and ordinary connection metadata. Gitamrta needs an internet connection and does not currently provide an offline verse library. Review the permissions and full source before installing.</p>
+        <a class="text-link" href="../security.md" target="_blank" rel="noreferrer">Read the security notes <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="install-section" id="install" aria-labelledby="install-title">
+      <div class="page-width install-inner">
+        <div class="install-copy">
+          <div class="section-topline install-topline"><span class="section-number">04</span><span class="section-line"></span><span>GET STARTED</span></div>
+          <p class="eyebrow">NOT ON THE CHROME WEB STORE YET</p>
+          <h2 id="install-title">A few steps<br>to your <em>first shloka.</em></h2>
+          <p>Gitamrta is currently installed from its source repository using Chrome's developer-mode flow. The repository URL will be added here when it is ready to share.</p>
+          <div class="install-badges"><span><i></i> Chrome · Manifest V3</span><span><i></i> No build step required</span></div>
+        </div>
+        <div class="install-instructions">
+          <div class="install-step"><span class="install-step-number">01</span><div><h3>Clone the repository</h3><p>Replace the placeholder with the public repository URL when it is published.</p><div class="code-block"><code id="clone-command">git clone &lt;repository-url&gt;</code><button id="copy-clone" type="button" aria-label="Copy clone command" title="Copy clone command"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="6" width="9" height="11" rx="1.5"/><path d="M13 6V4.5A1.5 1.5 0 0 0 11.5 3h-7A1.5 1.5 0 0 0 3 4.5v9A1.5 1.5 0 0 0 4.5 15H7"/></svg></button></div><span class="copy-status" id="clone-status" role="status" aria-live="polite">Repository link will be configured here.</span></div></div>
+          <div class="install-step"><span class="install-step-number">02</span><div><h3>Open Chrome extensions</h3><p>Visit <code>chrome://extensions</code> in your Chrome browser and turn on <strong>Developer mode</strong>.</p></div></div>
+          <div class="install-step"><span class="install-step-number">03</span><div><h3>Load the project folder</h3><p>Select <strong>Load unpacked</strong>, then choose the Gitamrta project folder containing <code>manifest.json</code>.</p></div></div>
+          <div class="install-step"><span class="install-step-number">04</span><div><h3>Pin and open Gitamrta</h3><p>Pin the extension from Chrome's puzzle-piece menu. Open it, search a verse or choose Random Shloka.</p></div></div>
+          <div class="install-footnote"><span aria-hidden="true">i</span><p>Install only from the official project repository once its URL is published. Do not install repackaged copies from unknown sources.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section page-width" id="project" aria-labelledby="project-title">
+      <div class="section-topline"><span class="section-number">05</span><span class="section-line"></span><span>THE PROJECT</span></div>
+      <div class="project-layout">
+        <div><p class="eyebrow">SOURCE-AVAILABLE BY DESIGN</p><h2 id="project-title">Understand what<br>you <em>bring in.</em></h2><p class="project-lede">Gitamrta's source and documentation are intended to be inspectable. The project uses a proprietary source-available license, so public visibility should not be mistaken for permission to modify, redistribute or commercially use the software.</p></div>
+        <div class="project-links">
+          <a class="project-link" href="../README.md"><span><small>01 / PROJECT GUIDE</small><strong>README</strong></span><b>↗</b></a>
+          <a class="project-link" href="../license.txt"><span><small>02 / TERMS OF USE</small><strong>License</strong></span><b>↗</b></a>
+          <a class="project-link" href="../changelog.md"><span><small>03 / RELEASE HISTORY</small><strong>Changelog</strong></span><b>↗</b></a>
+          <a class="project-link" href="../contributing.md"><span><small>04 / PROJECT GUIDANCE</small><strong>Contributing</strong></span><b>↗</b></a>
+          <a class="project-link" href="../security.md"><span><small>05 / SAFETY &amp; REPORTS</small><strong>Security</strong></span><b>↗</b></a>
+          <a class="project-link repo-project-link" id="repo-project-link" href="#project" aria-disabled="true"><span><small>06 / SOURCE REPOSITORY</small><strong>Repository URL pending</strong></span><b>↗</b></a>
+        </div>
+      </div>
+      <div class="license-callout"><span class="license-symbol">§</span><p><strong>Proprietary source-available license.</strong> Personal inspection and use of official unmodified releases are subject to the terms in <a href="../license.txt">license.txt</a>. Third-party material may carry separate terms.</p></div>
+    </section>
+
+    <section class="faq-section page-width" aria-labelledby="faq-title">
+      <div class="section-topline"><span class="section-number">06</span><span class="section-line"></span><span>QUESTIONS, ANSWERED</span></div>
+      <div class="faq-layout">
+        <div><p class="eyebrow">BEFORE YOU BEGIN</p><h2 id="faq-title">A few things<br>worth <em>knowing.</em></h2></div>
+        <div class="faq-list">
+          <details><summary>Does Gitamrta work offline?<span aria-hidden="true">+</span></summary><p>No. It fetches the selected verse from the external Vedic Scriptures API, so an internet connection is required. The extension remembers your last reference, but it does not store an offline verse library.</p></details>
+          <details><summary>How do I find a particular shloka?<span aria-hidden="true">+</span></summary><p>Enter the chapter and verse separated by a slash. For example, <code>2/47</code> opens Chapter 2, Verse 47. The extension validates the reference against its chapter verse-count list.</p></details>
+          <details><summary>Why might a translation or commentary be missing?<span aria-hidden="true">+</span></summary><p>The API may not provide that field for the selected verse, or it may not include an entry from one of the authors supported by the current extension build. Gitamrta shows an unavailable message rather than inventing content.</p></details>
+          <details><summary>What is saved on my device?<span aria-hidden="true">+</span></summary><p>The current extension stores your selected theme and last viewed chapter/verse in Chrome local extension storage. The verse is fetched again when you open it.</p></details>
+          <details><summary>Is Gitamrta open source?<span aria-hidden="true">+</span></summary><p>It is source-available under a proprietary license, not an open-source license. Read the complete <a href="../license.txt">license terms</a> before using the source or an official release.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section page-width">
+      <div class="closing-panel">
+        <div class="closing-mark"><img src="assets/gitamrta-logo.svg" alt="" width="42" height="42"><span>GITAMRTA / BHAGAVAD GITA READER</span></div>
+        <p class="eyebrow">MAKE SPACE FOR A VERSE</p>
+        <h2>Read a little.<br><em>Reflect a while.</em></h2>
+        <p>Open the reader whenever you need a moment with the Gita.</p>
+        <a class="button button-inverted" href="#install">Get started with Gitamrta <span aria-hidden="true">↑</span></a>
+        <span class="closing-ornament" aria-hidden="true">ॐ</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-main">
+      <a class="brand footer-brand" href="#top"><img src="assets/gitamrta-logo.svg" width="32" height="32" alt=""><span class="brand-word">Gitamrta</span></a>
+      <p>A quiet companion for reading the Bhagavad Gita.</p>
+      <a class="back-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="page-width footer-bottom">
+      <span>© <span id="year"></span> Darshseraphic · Gitamrta</span>
+      <span class="footer-legal"><a href="../license.txt">License</a><a href="../security.md">Security</a><a href="../DESIGN_CREDITS.md">Design credits</a></span>
+      <span class="footer-attribution">Design inspiration: <a href="https://www.heydamir.design/unslop" target="_blank" rel="noreferrer">Unslop by Damir Sokolovsky</a> · CC BY 4.0</span>
+    </div>
+  </footer>
+</body>
+</html>

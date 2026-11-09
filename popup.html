@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Gitamrta</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-lockup" aria-label="Gitamrta">
+        <img class="brand-mark" src="icons/gitamrta-logo.svg" alt="" aria-hidden="true">
+        <div class="brand-copy">
+          <span class="brand-name">Gitamrta</span>
+          <span class="brand-kicker">BHAGAVAD GITA READER</span>
+        </div>
+      </div>
+      <button class="theme-button" id="themeButton" type="button" aria-label="Change theme" title="Theme: System">
+        <svg class="theme-icon" viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="3.5"></circle>
+          <path d="M10 1.75v2M10 16.25v2M18.25 10h-2M3.75 10h-2m14.08-5.83-1.42 1.42M5.59 14.41l-1.42 1.42m11.66 0-1.42-1.42M5.59 5.59 4.17 4.17"></path>
+        </svg>
+        <span id="themeLabel">System</span>
+      </button>
+    </header>
+
+    <section class="intro" aria-labelledby="headline">
+      <p class="eyebrow">A MOMENT OF CLARITY</p>
+      <h1 id="headline">Wisdom, one<br>shloka at a time.</h1>
+      <p class="intro-copy">Explore the Bhagavad Gita in Sanskrit, with a readable transliteration.</p>
+    </section>
+
+    <section class="search-card" aria-labelledby="searchHeading">
+      <div class="section-heading-row">
+        <label class="section-label" id="searchHeading" for="verseInput">FIND A SHLOKA</label>
+        <span class="input-hint">CHAPTER / VERSE</span>
+      </div>
+      <form id="searchForm" class="search-form" novalidate>
+        <input
+          id="verseInput"
+          name="verse"
+          type="text"
+          inputmode="numeric"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="e.g. 2/47"
+          aria-label="Chapter and verse, such as 2 slash 47"
+          aria-describedby="searchHelp searchError"
+        >
+        <button class="search-submit" type="submit" aria-label="Find shloka" title="Find shloka">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"></path></svg>
+        </button>
+      </form>
+      <div class="search-meta">
+        <span id="searchHelp">Enter a chapter and verse, separated by “/”.</span>
+        <span id="searchError" class="error-message" role="alert"></span>
+      </div>
+    </section>
+
+    <div class="random-row">
+      <div class="random-copy">
+        <span class="random-title">A little serendipity</span>
+        <span class="random-subtitle">Let the Gita find you a verse.</span>
+      </div>
+      <button class="random-button" id="randomButton" type="button">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15.5 4.5h-2.2a3 3 0 0 0-2.4 1.2L7.8 10l-1.1 1.5a3 3 0 0 1-2.4 1.2H2.5M12.8 4.5h2.7v2.7M15.5 15.5h-2.2a3 3 0 0 1-2.4-1.2l-.8-1.1M12.8 15.5h2.7v-2.7M2.5 6.1h1.8a3 3 0 0 1 2.4 1.2l.8 1.1"></path></svg>
+        <span>Random shloka</span>
+      </button>
+    </div>
+
+    <section class="verse-card" aria-labelledby="verseHeading" aria-live="polite" aria-busy="false" id="verseCard">
+      <div class="verse-card-top">
+        <div>
+          <p class="eyebrow verse-eyebrow">THE BHAGAVAD GITA</p>
+          <h2 id="verseHeading">Your shloka</h2>
+        </div>
+        <span class="verse-reference" id="verseReference">— / —</span>
+      </div>
+
+      <div class="verse-content" id="verseContent">
+        <div class="loading-state" id="loadingState">
+          <span class="loader" aria-hidden="true"></span>
+          <span>Opening a verse…</span>
+        </div>
+        <div class="verse-section" id="sanskritSection" hidden>
+          <div class="content-label">SANSKRIT</div>
+          <p class="sanskrit-text" id="sanskritText" lang="sa"></p>
+        </div>
+        <div class="verse-divider" id="verseDivider" hidden></div>
+        <div class="verse-section" id="transliterationSection" hidden>
+          <div class="content-label">TRANSLITERATION</div>
+          <p class="transliteration-text" id="transliterationText"></p>
+        </div>
+        <div class="verse-divider" id="translationDivider" hidden></div>
+        <div class="translations-group" id="translationsGroup" hidden>
+          <div class="content-label translations-heading">TRANSLATIONS &amp; COMMENTARIES</div>
+          <section class="translation-section" id="englishTranslationSection">
+            <div class="content-label">ENGLISH TRANSLATION</div>
+            <div class="attributed-content" id="englishTranslationContent"></div>
+          </section>
+          <section class="translation-section" id="hindiCommentarySection">
+            <div class="content-label">HINDI COMMENTARY</div>
+            <div class="attributed-content" id="hindiCommentaryContent"></div>
+          </section>
+        </div>
+        <div class="error-state" id="verseError" hidden>
+          <span class="error-title">This verse could not be loaded.</span>
+          <span class="error-detail" id="verseErrorDetail">Check your connection and try again.</span>
+          <button class="retry-button" id="retryButton" type="button">Try again</button>
+        </div>
+      </div>
+
+      <div class="verse-card-bottom" id="verseCardBottom" hidden>
+        <span class="verse-count" id="verseCount"></span>
+        <button class="copy-button" id="copyButton" type="button">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="7" width="9" height="10" rx="1.5"></rect><path d="M12.5 7V4.5A1.5 1.5 0 0 0 11 3H5.5A1.5 1.5 0 0 0 4 4.5V13a1.5 1.5 0 0 0 1.5 1.5H7"></path></svg>
+          <span>Copy verse</span>
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="footer-mark" aria-hidden="true">✳</span>
+      <span>Made for a quieter moment.</span>
+      <span class="footer-version">v1.1.1</span>
+    </footer>
+  </main>
+</body>
+</html>
